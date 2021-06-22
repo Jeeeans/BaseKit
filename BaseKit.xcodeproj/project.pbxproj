@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7EE1790726801B120086C9C0 /* BaseKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE178DE26801B110086C9C0 /* BaseKitApp.swift */; };
-		7EE1790826801B120086C9C0 /* BaseKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE178DE26801B110086C9C0 /* BaseKitApp.swift */; };
-		7EE1790926801B120086C9C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE178DF26801B110086C9C0 /* ContentView.swift */; };
-		7EE1790A26801B120086C9C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE178DF26801B110086C9C0 /* ContentView.swift */; };
+		7E1207302681565F0034FE1E /* Codable+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12072F2681565F0034FE1E /* Codable+Base.swift */; };
+		7E1207312681565F0034FE1E /* Codable+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12072F2681565F0034FE1E /* Codable+Base.swift */; };
+		7E12073326815BAE0034FE1E /* RxInfinitePagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12073226815BAE0034FE1E /* RxInfinitePagable.swift */; };
+		7E12073426815BAE0034FE1E /* RxInfinitePagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12073226815BAE0034FE1E /* RxInfinitePagable.swift */; };
+		7E120736268189660034FE1E /* BaseRxUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E120735268189660034FE1E /* BaseRxUICollectionView.swift */; };
+		7E120737268189660034FE1E /* BaseRxUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E120735268189660034FE1E /* BaseRxUICollectionView.swift */; };
+		7E120739268189D00034FE1E /* BaseRxUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E120738268189D00034FE1E /* BaseRxUICollectionViewCell.swift */; };
+		7E12073A268189D00034FE1E /* BaseRxUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E120738268189D00034FE1E /* BaseRxUICollectionViewCell.swift */; };
+		7E12073C26818D1D0034FE1E /* UIImageView+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12073B26818D1D0034FE1E /* UIImageView+Base.swift */; };
+		7E12073D26818D1D0034FE1E /* UIImageView+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12073B26818D1D0034FE1E /* UIImageView+Base.swift */; };
 		7EE1790B26801B120086C9C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EE178E026801B120086C9C0 /* Assets.xcassets */; };
 		7EE1790C26801B120086C9C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EE178E026801B120086C9C0 /* Assets.xcassets */; };
 		7EE1791D26801BF50086C9C0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7EE1791C26801BF50086C9C0 /* Alamofire */; };
@@ -48,8 +54,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7EE178DE26801B110086C9C0 /* BaseKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseKitApp.swift; sourceTree = "<group>"; };
-		7EE178DF26801B110086C9C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7E12072F2681565F0034FE1E /* Codable+Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Base.swift"; sourceTree = "<group>"; };
+		7E12073226815BAE0034FE1E /* RxInfinitePagable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxInfinitePagable.swift; sourceTree = "<group>"; };
+		7E120735268189660034FE1E /* BaseRxUICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRxUICollectionView.swift; sourceTree = "<group>"; };
+		7E120738268189D00034FE1E /* BaseRxUICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRxUICollectionViewCell.swift; sourceTree = "<group>"; };
+		7E12073B26818D1D0034FE1E /* UIImageView+Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Base.swift"; sourceTree = "<group>"; };
 		7EE178E026801B120086C9C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EE178E526801B120086C9C0 /* BaseKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE178E826801B120086C9C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,8 +126,6 @@
 				7EE17944268034940086C9C0 /* Util */,
 				7EE1793726801D6B0086C9C0 /* Network */,
 				7EE1793626801D640086C9C0 /* UI */,
-				7EE178DE26801B110086C9C0 /* BaseKitApp.swift */,
-				7EE178DF26801B110086C9C0 /* ContentView.swift */,
 				7EE178E026801B120086C9C0 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -163,6 +170,9 @@
 				7EE1794F26805B000086C9C0 /* BaseRxViewController.swift */,
 				7EE1795226805B090086C9C0 /* BaseRxViewModel.swift */,
 				7EE1795526805B190086C9C0 /* BaseRxDataSource.swift */,
+				7E12073226815BAE0034FE1E /* RxInfinitePagable.swift */,
+				7E120735268189660034FE1E /* BaseRxUICollectionView.swift */,
+				7E120738268189D00034FE1E /* BaseRxUICollectionViewCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -190,6 +200,8 @@
 			children = (
 				7EE1794926803F3E0086C9C0 /* String+Base.swift */,
 				7EE1794C268059E10086C9C0 /* Dictionary+Base.swift */,
+				7E12072F2681565F0034FE1E /* Codable+Base.swift */,
+				7E12073B26818D1D0034FE1E /* UIImageView+Base.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -314,17 +326,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E120739268189D00034FE1E /* BaseRxUICollectionViewCell.swift in Sources */,
 				7EE1794A26803F3F0086C9C0 /* String+Base.swift in Sources */,
+				7E12073326815BAE0034FE1E /* RxInfinitePagable.swift in Sources */,
+				7E1207302681565F0034FE1E /* Codable+Base.swift in Sources */,
 				7EE1795626805B190086C9C0 /* BaseRxDataSource.swift in Sources */,
+				7E12073C26818D1D0034FE1E /* UIImageView+Base.swift in Sources */,
 				7EE1795326805B090086C9C0 /* BaseRxViewModel.swift in Sources */,
 				7EE1793926801D7C0086C9C0 /* BaseApiClient.swift in Sources */,
 				7EE1795026805B000086C9C0 /* BaseRxViewController.swift in Sources */,
 				7EE1795926805CF10086C9C0 /* BaseReponse.swift in Sources */,
 				7EE1795C26805D1D0086C9C0 /* BaseRequest.swift in Sources */,
-				7EE1790926801B120086C9C0 /* ContentView.swift in Sources */,
 				7EE179462680349D0086C9C0 /* Log.swift in Sources */,
+				7E120736268189660034FE1E /* BaseRxUICollectionView.swift in Sources */,
 				7EE1794D268059E10086C9C0 /* Dictionary+Base.swift in Sources */,
-				7EE1790726801B120086C9C0 /* BaseKitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,17 +347,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E12073A268189D00034FE1E /* BaseRxUICollectionViewCell.swift in Sources */,
 				7EE1794B26803F3F0086C9C0 /* String+Base.swift in Sources */,
+				7E12073426815BAE0034FE1E /* RxInfinitePagable.swift in Sources */,
+				7E1207312681565F0034FE1E /* Codable+Base.swift in Sources */,
 				7EE1795726805B190086C9C0 /* BaseRxDataSource.swift in Sources */,
+				7E12073D26818D1D0034FE1E /* UIImageView+Base.swift in Sources */,
 				7EE1795426805B090086C9C0 /* BaseRxViewModel.swift in Sources */,
 				7EE1793A26801D7C0086C9C0 /* BaseApiClient.swift in Sources */,
 				7EE1795126805B000086C9C0 /* BaseRxViewController.swift in Sources */,
 				7EE1795A26805CF10086C9C0 /* BaseReponse.swift in Sources */,
 				7EE1795D26805D1D0086C9C0 /* BaseRequest.swift in Sources */,
-				7EE1790A26801B120086C9C0 /* ContentView.swift in Sources */,
 				7EE179472680349D0086C9C0 /* Log.swift in Sources */,
+				7E120737268189660034FE1E /* BaseRxUICollectionView.swift in Sources */,
 				7EE1794E268059E10086C9C0 /* Dictionary+Base.swift in Sources */,
-				7EE1790826801B120086C9C0 /* BaseKitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

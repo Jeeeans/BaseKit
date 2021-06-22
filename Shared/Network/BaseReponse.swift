@@ -6,5 +6,5 @@
 //
 
 
-open class BaseResponse {
+public struct BaseResponse: Decodable {
 }

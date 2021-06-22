@@ -6,61 +6,80 @@
 //
 
 import Alamofire
+import RxSwift
 import Foundation
 
-protocol ApiClient {
-    var baseUrl: String { get set }
-    var headers: [String:Any] { get set }
-    var apiClient: BaseApiClient { get set }
+public protocol ApiClient {
+    func sendGet<T: Decodable>(_ urlString: String, parameters: Parameters?) -> Observable<T>
+    func sendGet<T: Decodable>(path: String, parameters: Parameters?) -> Observable<T>
+    func sendPost<T: Decodable>(_ urlString: String, parameters: Parameters?) -> Observable<T>
+    func sendPost<T: Decodable>(path: String, parameters: Parameters?) -> Observable<T>
 }
 
-class BaseApiClient {
+open class BaseApiClient: ApiClient {
     public typealias CompletionHandler<T: Decodable> = ((T?, AFError?) -> ())?
     
-    var baseURLConvertible = urlRequestConvertible("")
+    var baseURLConvertible: urlRequestConvertible!
+    static let label = "ApiClient"
+    static var queue = DispatchQueue.init(label: BaseApiClient.label, qos: .background, attributes: .concurrent)
     
-    func sendGet<T : Decodable>(_ urlString: String, parameters: Parameters?, completionHandler: CompletionHandler<T> = nil) {
+    init(baseUrl: String) {
+        baseURLConvertible = urlRequestConvertible(baseUrl)
+    }
+    
+    public func sendGet<T: Decodable>(_ urlString: String, parameters: Parameters? = nil) -> Observable<T> {
         let urlConvertible = baseURLConvertible.urlConvertible(urlString: urlString, parameters: parameters)
-        sendRequest(urlConvertible, completionHandler: completionHandler)
+        return sendRequest(urlConvertible)
     }
     
-    func sendGet<T : Decodable>(path: String, parameters: Parameters?, completionHandler: CompletionHandler<T> = nil) {
+    public func sendGet<T: Decodable>(path: String, parameters: Parameters? = nil) -> Observable<T> {
         let urlConvertible = baseURLConvertible.urlConvertible(path: path, parameters: parameters)
-        sendRequest(urlConvertible, completionHandler: completionHandler)
+        return sendRequest(urlConvertible)
     }
     
-    func sendPost<T: Decodable>(_ urlString: String, parameters: Parameters?, completionHandler: CompletionHandler<T> = nil) {
+    public func sendPost<T: Decodable>(_ urlString: String, parameters: Parameters? = nil) -> Observable<T> {
         let urlConvertible = baseURLConvertible.urlConvertible(urlString: urlString, method: .post, parameters: parameters)
-        sendRequest(urlConvertible, completionHandler: completionHandler)
+        return sendRequest(urlConvertible)
     }
     
-    func sendPost<T: Decodable>(path: String, parameters: Parameters?, completionHandler: CompletionHandler<T> = nil) {
+    public func sendPost<T: Decodable>(path: String, parameters: Parameters? = nil) -> Observable<T> {
         let urlConvertible = baseURLConvertible.urlConvertible(path: path, method: .post, parameters: parameters)
-        sendRequest(urlConvertible, completionHandler: completionHandler)
+        return sendRequest(urlConvertible)
     }
     
-    func sendRequest<T : Decodable>(_ urlConvertible: URLRequestConvertible, completionHandler: CompletionHandler<T>) {
-        AF.request(urlConvertible)
-            .validate()
-            .responseDecodable { [weak self] response in
-                self?.onCompleted(response: response, completionHandler: completionHandler)
+    func sendRequest<T: Decodable>(_ urlConvertible: URLRequestConvertible) -> Observable<T> {
+        return Observable<T>.create { observer in
+            AF.request(urlConvertible).validate()
+                .responseDecodable(of: T.self, queue: BaseApiClient.queue) { [weak self] response in
+                    self?.onCompleted(observer: observer, response: response)
+                }
+            
+            return Disposables.create {
+                
             }
-    }
-    
-    func onCompleted<T: Decodable>(response: AFDataResponse<T>, completionHandler: CompletionHandler<T>) {
-        guard let data = response.data as? T else {
-            if let error = response.error {
-                onError(error: error, completionHandler: completionHandler)
-            }
-            return
         }
-        
-        completionHandler?(data, nil)
     }
     
-    func onError<T: Decodable>(error: AFError, completionHandler: CompletionHandler<T>) {
+    func onCompleted<T: Decodable>(observer: AnyObserver<T>, response: AFDataResponse<T>) {
+        switch response.result {
+        case .success:
+            guard let data = response.data as? T else { return }
+            onSuccess(observer: observer, data: data)
+            break
+        case .failure:
+            guard let error = response.error else { return }
+            onError(observer: observer, error: error)
+            break
+        }
+    }
+    
+    func onSuccess<T: Decodable>(observer: AnyObserver<T>, data: T) {
+        observer.onNext(data)
+    }
+    
+    func onError<T: Decodable>(observer: AnyObserver<T>, error: AFError) {
         Log.e(error)
-        completionHandler?(nil, error)
+        observer.onError(error)
     }
     
 }
@@ -130,6 +149,7 @@ class urlRequestConvertible: URLRequestConvertible {
     
     func urlConvertible(path: String, method: HTTPMethod = .get, parameters: Parameters? = nil) -> URLRequestConvertible {
         self.path = path
+        self.urlString = self.baseURL + path
         self.method = method
         self.parameters = parameters
         
