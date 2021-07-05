@@ -51,6 +51,14 @@
 		7EE1795A26805CF10086C9C0 /* BaseReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE1795826805CF10086C9C0 /* BaseReponse.swift */; };
 		7EE1795C26805D1D0086C9C0 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE1795B26805D1D0086C9C0 /* BaseRequest.swift */; };
 		7EE1795D26805D1D0086C9C0 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE1795B26805D1D0086C9C0 /* BaseRequest.swift */; };
+		7EE8619E268D57A800616ACC /* UIImage+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8619D268D57A800616ACC /* UIImage+Base.swift */; };
+		7EE8619F268D57A800616ACC /* UIImage+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8619D268D57A800616ACC /* UIImage+Base.swift */; };
+		7EE861A2268D64DF00616ACC /* RXCollectionViewAdaptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE861A1268D64DF00616ACC /* RXCollectionViewAdaptable.swift */; };
+		7EE861A3268D64DF00616ACC /* RXCollectionViewAdaptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE861A1268D64DF00616ACC /* RXCollectionViewAdaptable.swift */; };
+		7EE861A5268D662300616ACC /* UICollectionView+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE861A4268D662300616ACC /* UICollectionView+Base.swift */; };
+		7EE861A6268D662300616ACC /* UICollectionView+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE861A4268D662300616ACC /* UICollectionView+Base.swift */; };
+		7EE861A8268D6B8A00616ACC /* BaseRxAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE861A7268D6B8A00616ACC /* BaseRxAdapter.swift */; };
+		7EE861A9268D6B8A00616ACC /* BaseRxAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE861A7268D6B8A00616ACC /* BaseRxAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +82,10 @@
 		7EE1795526805B190086C9C0 /* BaseRxDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRxDataSource.swift; sourceTree = "<group>"; };
 		7EE1795826805CF10086C9C0 /* BaseReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReponse.swift; sourceTree = "<group>"; };
 		7EE1795B26805D1D0086C9C0 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		7EE8619D268D57A800616ACC /* UIImage+Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Base.swift"; sourceTree = "<group>"; };
+		7EE861A1268D64DF00616ACC /* RXCollectionViewAdaptable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXCollectionViewAdaptable.swift; sourceTree = "<group>"; };
+		7EE861A4268D662300616ACC /* UICollectionView+Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Base.swift"; sourceTree = "<group>"; };
+		7EE861A7268D6B8A00616ACC /* BaseRxAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRxAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +134,7 @@
 		7EE178DD26801B110086C9C0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				7EE861A0268D64BF00616ACC /* Protocol */,
 				7EE1794826803F280086C9C0 /* Extensions */,
 				7EE17944268034940086C9C0 /* Util */,
 				7EE1793726801D6B0086C9C0 /* Network */,
@@ -173,6 +186,7 @@
 				7E12073226815BAE0034FE1E /* RxInfinitePagable.swift */,
 				7E120735268189660034FE1E /* BaseRxUICollectionView.swift */,
 				7E120738268189D00034FE1E /* BaseRxUICollectionViewCell.swift */,
+				7EE861A7268D6B8A00616ACC /* BaseRxAdapter.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -202,8 +216,18 @@
 				7EE1794C268059E10086C9C0 /* Dictionary+Base.swift */,
 				7E12072F2681565F0034FE1E /* Codable+Base.swift */,
 				7E12073B26818D1D0034FE1E /* UIImageView+Base.swift */,
+				7EE8619D268D57A800616ACC /* UIImage+Base.swift */,
+				7EE861A4268D662300616ACC /* UICollectionView+Base.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7EE861A0268D64BF00616ACC /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				7EE861A1268D64DF00616ACC /* RXCollectionViewAdaptable.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,16 +353,20 @@
 				7E120739268189D00034FE1E /* BaseRxUICollectionViewCell.swift in Sources */,
 				7EE1794A26803F3F0086C9C0 /* String+Base.swift in Sources */,
 				7E12073326815BAE0034FE1E /* RxInfinitePagable.swift in Sources */,
+				7EE8619E268D57A800616ACC /* UIImage+Base.swift in Sources */,
 				7E1207302681565F0034FE1E /* Codable+Base.swift in Sources */,
 				7EE1795626805B190086C9C0 /* BaseRxDataSource.swift in Sources */,
 				7E12073C26818D1D0034FE1E /* UIImageView+Base.swift in Sources */,
 				7EE1795326805B090086C9C0 /* BaseRxViewModel.swift in Sources */,
 				7EE1793926801D7C0086C9C0 /* BaseApiClient.swift in Sources */,
+				7EE861A2268D64DF00616ACC /* RXCollectionViewAdaptable.swift in Sources */,
 				7EE1795026805B000086C9C0 /* BaseRxViewController.swift in Sources */,
 				7EE1795926805CF10086C9C0 /* BaseReponse.swift in Sources */,
+				7EE861A5268D662300616ACC /* UICollectionView+Base.swift in Sources */,
 				7EE1795C26805D1D0086C9C0 /* BaseRequest.swift in Sources */,
 				7EE179462680349D0086C9C0 /* Log.swift in Sources */,
 				7E120736268189660034FE1E /* BaseRxUICollectionView.swift in Sources */,
+				7EE861A8268D6B8A00616ACC /* BaseRxAdapter.swift in Sources */,
 				7EE1794D268059E10086C9C0 /* Dictionary+Base.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,16 +378,20 @@
 				7E12073A268189D00034FE1E /* BaseRxUICollectionViewCell.swift in Sources */,
 				7EE1794B26803F3F0086C9C0 /* String+Base.swift in Sources */,
 				7E12073426815BAE0034FE1E /* RxInfinitePagable.swift in Sources */,
+				7EE8619F268D57A800616ACC /* UIImage+Base.swift in Sources */,
 				7E1207312681565F0034FE1E /* Codable+Base.swift in Sources */,
 				7EE1795726805B190086C9C0 /* BaseRxDataSource.swift in Sources */,
 				7E12073D26818D1D0034FE1E /* UIImageView+Base.swift in Sources */,
 				7EE1795426805B090086C9C0 /* BaseRxViewModel.swift in Sources */,
 				7EE1793A26801D7C0086C9C0 /* BaseApiClient.swift in Sources */,
+				7EE861A3268D64DF00616ACC /* RXCollectionViewAdaptable.swift in Sources */,
 				7EE1795126805B000086C9C0 /* BaseRxViewController.swift in Sources */,
 				7EE1795A26805CF10086C9C0 /* BaseReponse.swift in Sources */,
+				7EE861A6268D662300616ACC /* UICollectionView+Base.swift in Sources */,
 				7EE1795D26805D1D0086C9C0 /* BaseRequest.swift in Sources */,
 				7EE179472680349D0086C9C0 /* Log.swift in Sources */,
 				7E120737268189660034FE1E /* BaseRxUICollectionView.swift in Sources */,
+				7EE861A9268D6B8A00616ACC /* BaseRxAdapter.swift in Sources */,
 				7EE1794E268059E10086C9C0 /* Dictionary+Base.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

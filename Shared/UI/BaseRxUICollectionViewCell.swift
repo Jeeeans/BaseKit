@@ -9,9 +9,14 @@ import Foundation
 import UIKit
 import RxSwift
 
-public protocol BaseRxUICollectionViewCell: UICollectionViewCell {
+protocol RxCollectionViewCellAdaptable: AnyObject {
     associatedtype Model: Decodable
     
-    static var size: CGSize { get set }
+    static func size(_ model: Model) -> CGSize
     func configure(_ model: Model)
+}
+
+public class BaseRxUICollectionViewCell<T: Decodable>: UICollectionViewCell {
+    
+    
 }

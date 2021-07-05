@@ -47,7 +47,7 @@ open class BaseApiClient: ApiClient {
         return sendRequest(urlConvertible)
     }
     
-    func sendRequest<T: Decodable>(_ urlConvertible: URLRequestConvertible) -> Observable<T> {
+    private func sendRequest<T: Decodable>(_ urlConvertible: URLRequestConvertible) -> Observable<T> {
         return Observable<T>.create { observer in
             AF.request(urlConvertible).validate()
                 .responseDecodable(of: T.self, queue: BaseApiClient.queue) { [weak self] response in
@@ -60,7 +60,7 @@ open class BaseApiClient: ApiClient {
         }
     }
     
-    func onCompleted<T: Decodable>(observer: AnyObserver<T>, response: AFDataResponse<T>) {
+    private func onCompleted<T: Decodable>(observer: AnyObserver<T>, response: AFDataResponse<T>) {
         switch response.result {
         case .success:
             guard let data = response.data as? T else { return }
@@ -73,11 +73,11 @@ open class BaseApiClient: ApiClient {
         }
     }
     
-    func onSuccess<T: Decodable>(observer: AnyObserver<T>, data: T) {
+    private func onSuccess<T: Decodable>(observer: AnyObserver<T>, data: T) {
         observer.onNext(data)
     }
     
-    func onError<T: Decodable>(observer: AnyObserver<T>, error: AFError) {
+    private func onError<T: Decodable>(observer: AnyObserver<T>, error: AFError) {
         Log.e(error)
         observer.onError(error)
     }
