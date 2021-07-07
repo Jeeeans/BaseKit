@@ -27,6 +27,10 @@ open class BaseApiClient: ApiClient {
         baseURLConvertible = urlRequestConvertible(baseUrl)
     }
     
+    func setHeaders() {
+        
+    }
+    
     public func sendGet<T: Decodable>(_ urlString: String, parameters: Parameters? = nil) -> Observable<T> {
         let urlConvertible = baseURLConvertible.urlConvertible(urlString: urlString, parameters: parameters)
         return sendRequest(urlConvertible)

@@ -51,14 +51,18 @@
 		7EE1795A26805CF10086C9C0 /* BaseReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE1795826805CF10086C9C0 /* BaseReponse.swift */; };
 		7EE1795C26805D1D0086C9C0 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE1795B26805D1D0086C9C0 /* BaseRequest.swift */; };
 		7EE1795D26805D1D0086C9C0 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE1795B26805D1D0086C9C0 /* BaseRequest.swift */; };
+		7EE798C6269531B1004B26FD /* RxDataSourceAdaptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE798C5269531B1004B26FD /* RxDataSourceAdaptable.swift */; };
+		7EE798C7269531B1004B26FD /* RxDataSourceAdaptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE798C5269531B1004B26FD /* RxDataSourceAdaptable.swift */; };
+		7EE798C926953C45004B26FD /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE798C826953C45004B26FD /* BaseModel.swift */; };
+		7EE798CA26953C45004B26FD /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE798C826953C45004B26FD /* BaseModel.swift */; };
 		7EE8619E268D57A800616ACC /* UIImage+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8619D268D57A800616ACC /* UIImage+Base.swift */; };
 		7EE8619F268D57A800616ACC /* UIImage+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8619D268D57A800616ACC /* UIImage+Base.swift */; };
 		7EE861A2268D64DF00616ACC /* RXCollectionViewAdaptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE861A1268D64DF00616ACC /* RXCollectionViewAdaptable.swift */; };
 		7EE861A3268D64DF00616ACC /* RXCollectionViewAdaptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE861A1268D64DF00616ACC /* RXCollectionViewAdaptable.swift */; };
 		7EE861A5268D662300616ACC /* UICollectionView+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE861A4268D662300616ACC /* UICollectionView+Base.swift */; };
 		7EE861A6268D662300616ACC /* UICollectionView+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE861A4268D662300616ACC /* UICollectionView+Base.swift */; };
-		7EE861A8268D6B8A00616ACC /* BaseRxAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE861A7268D6B8A00616ACC /* BaseRxAdapter.swift */; };
-		7EE861A9268D6B8A00616ACC /* BaseRxAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE861A7268D6B8A00616ACC /* BaseRxAdapter.swift */; };
+		7EE861A8268D6B8A00616ACC /* RxAdapterAdptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE861A7268D6B8A00616ACC /* RxAdapterAdptable.swift */; };
+		7EE861A9268D6B8A00616ACC /* RxAdapterAdptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE861A7268D6B8A00616ACC /* RxAdapterAdptable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,10 +86,12 @@
 		7EE1795526805B190086C9C0 /* BaseRxDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRxDataSource.swift; sourceTree = "<group>"; };
 		7EE1795826805CF10086C9C0 /* BaseReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReponse.swift; sourceTree = "<group>"; };
 		7EE1795B26805D1D0086C9C0 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		7EE798C5269531B1004B26FD /* RxDataSourceAdaptable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxDataSourceAdaptable.swift; sourceTree = "<group>"; };
+		7EE798C826953C45004B26FD /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		7EE8619D268D57A800616ACC /* UIImage+Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Base.swift"; sourceTree = "<group>"; };
 		7EE861A1268D64DF00616ACC /* RXCollectionViewAdaptable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXCollectionViewAdaptable.swift; sourceTree = "<group>"; };
 		7EE861A4268D662300616ACC /* UICollectionView+Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Base.swift"; sourceTree = "<group>"; };
-		7EE861A7268D6B8A00616ACC /* BaseRxAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRxAdapter.swift; sourceTree = "<group>"; };
+		7EE861A7268D6B8A00616ACC /* RxAdapterAdptable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAdapterAdptable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,10 +189,9 @@
 				7EE1794F26805B000086C9C0 /* BaseRxViewController.swift */,
 				7EE1795226805B090086C9C0 /* BaseRxViewModel.swift */,
 				7EE1795526805B190086C9C0 /* BaseRxDataSource.swift */,
-				7E12073226815BAE0034FE1E /* RxInfinitePagable.swift */,
 				7E120735268189660034FE1E /* BaseRxUICollectionView.swift */,
 				7E120738268189D00034FE1E /* BaseRxUICollectionViewCell.swift */,
-				7EE861A7268D6B8A00616ACC /* BaseRxAdapter.swift */,
+				7EE798C826953C45004B26FD /* BaseModel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -226,6 +231,9 @@
 			isa = PBXGroup;
 			children = (
 				7EE861A1268D64DF00616ACC /* RXCollectionViewAdaptable.swift */,
+				7EE861A7268D6B8A00616ACC /* RxAdapterAdptable.swift */,
+				7E12073226815BAE0034FE1E /* RxInfinitePagable.swift */,
+				7EE798C5269531B1004B26FD /* RxDataSourceAdaptable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -362,11 +370,13 @@
 				7EE861A2268D64DF00616ACC /* RXCollectionViewAdaptable.swift in Sources */,
 				7EE1795026805B000086C9C0 /* BaseRxViewController.swift in Sources */,
 				7EE1795926805CF10086C9C0 /* BaseReponse.swift in Sources */,
+				7EE798C6269531B1004B26FD /* RxDataSourceAdaptable.swift in Sources */,
 				7EE861A5268D662300616ACC /* UICollectionView+Base.swift in Sources */,
+				7EE798C926953C45004B26FD /* BaseModel.swift in Sources */,
 				7EE1795C26805D1D0086C9C0 /* BaseRequest.swift in Sources */,
 				7EE179462680349D0086C9C0 /* Log.swift in Sources */,
 				7E120736268189660034FE1E /* BaseRxUICollectionView.swift in Sources */,
-				7EE861A8268D6B8A00616ACC /* BaseRxAdapter.swift in Sources */,
+				7EE861A8268D6B8A00616ACC /* RxAdapterAdptable.swift in Sources */,
 				7EE1794D268059E10086C9C0 /* Dictionary+Base.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,11 +397,13 @@
 				7EE861A3268D64DF00616ACC /* RXCollectionViewAdaptable.swift in Sources */,
 				7EE1795126805B000086C9C0 /* BaseRxViewController.swift in Sources */,
 				7EE1795A26805CF10086C9C0 /* BaseReponse.swift in Sources */,
+				7EE798C7269531B1004B26FD /* RxDataSourceAdaptable.swift in Sources */,
 				7EE861A6268D662300616ACC /* UICollectionView+Base.swift in Sources */,
+				7EE798CA26953C45004B26FD /* BaseModel.swift in Sources */,
 				7EE1795D26805D1D0086C9C0 /* BaseRequest.swift in Sources */,
 				7EE179472680349D0086C9C0 /* Log.swift in Sources */,
 				7E120737268189660034FE1E /* BaseRxUICollectionView.swift in Sources */,
-				7EE861A9268D6B8A00616ACC /* BaseRxAdapter.swift in Sources */,
+				7EE861A9268D6B8A00616ACC /* RxAdapterAdptable.swift in Sources */,
 				7EE1794E268059E10086C9C0 /* Dictionary+Base.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

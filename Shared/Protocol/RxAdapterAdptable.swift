@@ -6,31 +6,37 @@
 //
 
 import Foundation
+import UIKit
 import RxSwift
 import RxRelay
 import RxCocoa
 
 protocol RxAdapterAdaptable: AnyObject {
-    associatedtype Model: Decodable
-    func getCellFromIndex(_ indexPath: IndexPath) -> BaseRxUICollectionViewCell<Model>
+    associatedtype CellType: RxCollectionViewCellAdaptable
+    
+    var disposeBag: DisposeBag { get set }
+    var _list: BehaviorRelay<[Decodable]> { get set }
+    var count: Int { get set }
+    func getCell(_ indexPath: IndexPath) -> CellType
+    func setCellWithModel()
+    
+    
+    var map: [BaseModel:BaseRxUICollectionViewCell] { get set }
 }
 
-public class BaseRxAdapter {
-    private var disposeBag = DisposeBag()
-    private var _list = BehaviorRelay<[Decodable]>(value: [])
+extension RxAdapterAdaptable {
+    
     private var listObservable: Observable<[Decodable]> { _list.asObservable() }
     var list: [Decodable] { _list.value }
     
-    var count: Int = 0
-
-    init() {
-        listObservable
+    func initialize() {
+        self.listObservable
             .observe(on: ConcurrentDispatchQueueScheduler(qos: .background))
             .map{ $0.count }
             .subscribe(onNext: { [weak self] count in
                 self?.count = count
             })
-            .disposed(by: disposeBag)
+            .disposed(by: self.disposeBag)
     }
 
     func update(_ observable: Observable<[Decodable]>) {
@@ -43,5 +49,10 @@ public class BaseRxAdapter {
     func item(_ index: Int) -> Decodable? {
         guard index < count else { return nil }
         return list[index]
+    }
+
+    
+    func selectItem(_ indexPath: IndexPath) {
+        
     }
 }

@@ -7,27 +7,14 @@
 
 import RxSwift
 
-public protocol DataSource: AnyObject {
-    associatedtype Request: Encodable
-    associatedtype Response: Decodable
-    
-    var client: ApiClient { get set }
-    var lastRequest: String? { get set }
-    
-    func fetchData(urlString: String) -> Observable<Response>
-    func fetchData(_ rq: Request, path: String) -> Observable<Response>
-    func fetchPage(urlString: String) -> Observable<Response>?
-    func fetchPage(_ rq: Request, path: String) -> Observable<Response>?
-}
-
-open class BaseRxDataSource<RQ: Encodable, RP: Decodable>: DataSource {
+open class BaseRxDataSource<RQ: Encodable, RP: Decodable>: RxDataSourceAdaptable {
     public typealias Request = RQ
     public typealias Response = RP
     
     public var client: ApiClient
     public var lastRequest: String?
     
-    var disposeBag = DisposeBag()
+    public var disposeBag = DisposeBag()
     
     init(baseUrl: String) {
         client = BaseApiClient(baseUrl: baseUrl)

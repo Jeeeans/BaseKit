@@ -16,7 +16,16 @@ protocol RxCollectionViewCellAdaptable: AnyObject {
     func configure(_ model: Model)
 }
 
-public class BaseRxUICollectionViewCell<T: Decodable>: UICollectionViewCell {
+public class BaseRxUICollectionViewCell: RxCollectionViewCellAdaptable {
     
     
+    typealias Model = BaseModel
+    
+    static func size(_ model: BaseModel) -> CGSize {
+        return .zero
+    }
+    
+    func configure(_ model: BaseModel) {
+        
+    }
 }

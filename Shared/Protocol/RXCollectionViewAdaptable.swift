@@ -11,11 +11,8 @@ import UIKit
 protocol RxCollectionViewAdaptable: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     var collectionView: UICollectionView { get set }
     var useSection: Bool { get set }
-    var adapter: BaseRxAdapter { get set }
-    
-    
+    var adapter: RxAdapterAdaptable { get set }
 }
-
 
 extension RxCollectionViewAdaptable {
     func getSectionModel(_ section: Int) -> Decodable? {
@@ -26,13 +23,9 @@ extension RxCollectionViewAdaptable {
         return adapter.count
     }
     
-    
-    func cellFromAdapter<T: Decodable>(indexPath: IndexPath) -> BaseRxUICollectionViewCell<T> {
-        return (adapter as RxAdapterAdaptable<T>).getCellFromIndex(indexPath)
+    func cellFromAdapter(indexPath: IndexPath) -> UICollectionViewCell? {
+        return (adapter as RxAdapterAdaptable).getCell(indexPath)
     }
-    
-    
-    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return useSection ? adapter.count : 1
@@ -47,11 +40,11 @@ extension RxCollectionViewAdaptable {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return collectionView.dequeueReusableCell(fromClass: cellFromAdapter(), for: indexPath)
+        return adapter.size(indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        collectionView.dequeueReusableCell(fromClass: cellFromAdapter(), for: indexPath)
+        return adapter.getCell(indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

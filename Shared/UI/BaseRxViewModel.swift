@@ -11,7 +11,7 @@ import RxRelay
 public protocol ViewModel: AnyObject {
     associatedtype Request: Encodable
     associatedtype Response: Decodable
-    associatedtype DataSourceType: DataSource
+    associatedtype DataSourceType: RxDataSourceAdaptable
     var dataSource: DataSourceType { get set }
 }
 
