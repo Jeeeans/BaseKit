@@ -12,12 +12,13 @@ import RxRelay
 import RxCocoa
 
 protocol RxAdapterAdaptable: AnyObject {
-    associatedtype CellType: RxCollectionViewCellAdaptable
+//    associatedtype CellType: RxCollectionViewCellAdaptable
     
     var disposeBag: DisposeBag { get set }
     var _list: BehaviorRelay<[Decodable]> { get set }
     var count: Int { get set }
-    func getCell(_ indexPath: IndexPath) -> CellType
+    func getCell(_ indexPath: IndexPath) -> UICollectionViewCell
+    func size(_ indexPath: IndexPath) -> CGSize
     func setCellWithModel()
     
     

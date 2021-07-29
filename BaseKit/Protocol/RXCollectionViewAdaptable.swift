@@ -24,7 +24,7 @@ extension RxCollectionViewAdaptable {
     }
     
     func cellFromAdapter(indexPath: IndexPath) -> UICollectionViewCell? {
-        return (adapter as RxAdapterAdaptable).getCell(indexPath)
+        return adapter.getCell(indexPath)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
