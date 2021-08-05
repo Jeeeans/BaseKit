@@ -39,6 +39,10 @@
 		7E09260526B2724F00C71631 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09260426B2724F00C71631 /* BaseCoordinator.swift */; };
 		7E09260726B2734B00C71631 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09260626B2734B00C71631 /* BaseNavigationController.swift */; };
 		7E09260B26B2800D00C71631 /* UIViewController+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09260A26B2800D00C71631 /* UIViewController+Base.swift */; };
+		7EB7BD6E26B369EB005433F2 /* BaseRxCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7BD6D26B369EB005433F2 /* BaseRxCollectionViewAdapter.swift */; };
+		7EB7BD7026B39D7C005433F2 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7BD6F26B39D7C005433F2 /* CommonFunctions.swift */; };
+		7EFF7A3426B3E7DD00360C6C /* ModuleResponsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF7A3326B3E7DD00360C6C /* ModuleResponsable.swift */; };
+		7EFF7A3626B7640F00360C6C /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF7A3526B7640F00360C6C /* Module.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +74,10 @@
 		7E09260426B2724F00C71631 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		7E09260626B2734B00C71631 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		7E09260A26B2800D00C71631 /* UIViewController+Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Base.swift"; sourceTree = "<group>"; };
+		7EB7BD6D26B369EB005433F2 /* BaseRxCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRxCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		7EB7BD6F26B39D7C005433F2 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		7EFF7A3326B3E7DD00360C6C /* ModuleResponsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleResponsable.swift; sourceTree = "<group>"; };
+		7EFF7A3526B7640F00360C6C /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				7E0925BB26B2510B00C71631 /* Log.swift */,
+				7EB7BD6F26B39D7C005433F2 /* CommonFunctions.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -167,6 +176,7 @@
 		7E0925C326B2510B00C71631 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				7EFF7A3226B3E7BA00360C6C /* Model */,
 				7E0925C426B2510B00C71631 /* BaseRxUICollectionView.swift */,
 				7E0925C526B2510B00C71631 /* BaseRxDataSource.swift */,
 				7E0925C626B2510B00C71631 /* BaseModel.swift */,
@@ -175,8 +185,18 @@
 				7E0925C926B2510B00C71631 /* BaseRxViewController.swift */,
 				7E09260426B2724F00C71631 /* BaseCoordinator.swift */,
 				7E09260626B2734B00C71631 /* BaseNavigationController.swift */,
+				7EB7BD6D26B369EB005433F2 /* BaseRxCollectionViewAdapter.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		7EFF7A3226B3E7BA00360C6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7EFF7A3326B3E7DD00360C6C /* ModuleResponsable.swift */,
+				7EFF7A3526B7640F00360C6C /* Module.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +294,7 @@
 				7E0925CB26B2510B00C71631 /* BaseRequest.swift in Sources */,
 				7E0925DA26B2510B00C71631 /* BaseRxDataSource.swift in Sources */,
 				7E0925D626B2510B00C71631 /* Codable+Base.swift in Sources */,
+				7EB7BD6E26B369EB005433F2 /* BaseRxCollectionViewAdapter.swift in Sources */,
 				7E0925CF26B2510B00C71631 /* RXCollectionViewAdaptable.swift in Sources */,
 				7E0925CD26B2510B00C71631 /* BaseApiClient.swift in Sources */,
 				7E0925D026B2510B00C71631 /* RxDataSourceAdaptable.swift in Sources */,
@@ -288,13 +309,16 @@
 				7E0925DB26B2510B00C71631 /* BaseModel.swift in Sources */,
 				7E0925D726B2510B00C71631 /* UIImage+Base.swift in Sources */,
 				7E0925DC26B2510B00C71631 /* BaseRxViewModel.swift in Sources */,
+				7EB7BD7026B39D7C005433F2 /* CommonFunctions.swift in Sources */,
 				7E0925DD26B2510B00C71631 /* BaseRxUICollectionViewCell.swift in Sources */,
 				7E09260526B2724F00C71631 /* BaseCoordinator.swift in Sources */,
 				7E0925D526B2510B00C71631 /* Dictionary+Base.swift in Sources */,
 				7E09260326B26F8500C71631 /* RxViewModelAttachable.swift in Sources */,
+				7EFF7A3626B7640F00360C6C /* Module.swift in Sources */,
 				7E0925DF26B2510B00C71631 /* BaseAppDelegate.swift in Sources */,
 				7E0925D226B2510B00C71631 /* Log.swift in Sources */,
 				7E0925D326B2510B00C71631 /* String+Base.swift in Sources */,
+				7EFF7A3426B3E7DD00360C6C /* ModuleResponsable.swift in Sources */,
 				7E0925CC26B2510B00C71631 /* BaseReponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

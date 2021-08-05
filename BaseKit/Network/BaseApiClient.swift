@@ -23,11 +23,15 @@ open class BaseApiClient: ApiClient {
     static let label = "ApiClient"
     static var queue = DispatchQueue.init(label: BaseApiClient.label, qos: .background, attributes: .concurrent)
     
-    init(baseUrl: String) {
+    
+    open var headers: [String:Any] = [:]
+    
+    public init(baseUrl: String) {
         baseURLConvertible = urlRequestConvertible(baseUrl)
+        setHeaders()
     }
     
-    func setHeaders() {
+    open func setHeaders() {
         
     }
     

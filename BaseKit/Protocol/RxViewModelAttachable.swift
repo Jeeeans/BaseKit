@@ -9,7 +9,7 @@ import Foundation
 
 
 public protocol RxViewModelAttachable {
-    var viewModel: BaseRxViewModel { get set }
+    var viewModel: BaseRxViewModel! { get set }
 }
 
 extension RxViewModelAttachable {

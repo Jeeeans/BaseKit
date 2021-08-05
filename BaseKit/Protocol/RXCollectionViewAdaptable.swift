@@ -8,10 +8,10 @@
 import UIKit
 
 
-protocol RxCollectionViewAdaptable: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-    var collectionView: UICollectionView { get set }
+public protocol RxCollectionViewAdaptable: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    var collectionView: UICollectionView! { get set }
     var useSection: Bool { get set }
-    var adapter: RxAdapterAdaptable { get set }
+    var adapter: BaseRxCollectionViewAdapter { get set }
 }
 
 extension RxCollectionViewAdaptable {
@@ -44,7 +44,8 @@ extension RxCollectionViewAdaptable {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return adapter.getCell(indexPath)
+        guard let cell = adapter.getCell(indexPath) else { return UICollectionViewCell() }
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

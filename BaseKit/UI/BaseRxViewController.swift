@@ -7,8 +7,8 @@
 
 import UIKit
 
-open class BaseRxViewController: UIViewController {
-    var viewModel: BaseRxViewModel!
+open class BaseRxViewController<T: BaseRxViewModel>: UIViewController {
+    open var viewModel: T!
     
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,9 +16,13 @@ open class BaseRxViewController: UIViewController {
         self.initialize()
     }
     
-    func initialize() {
-        viewModel = BaseRxViewModel()
-
+    open func initialize() {
+        
+    }
+    
+    
+    open func viewModelBind(_ viewModel: T) {
+        
     }
 
 }

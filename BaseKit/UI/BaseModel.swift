@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct BaseModel: Codable, Hashable {
+public struct BaseModel: Codable, Hashable {
     
 }

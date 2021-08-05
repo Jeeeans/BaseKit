@@ -9,23 +9,18 @@ import Foundation
 import UIKit
 import RxSwift
 
-protocol RxCollectionViewCellAdaptable: AnyObject {
-    associatedtype Model: Decodable
+public protocol RxCollectionViewCellAdaptable: AnyObject {
+    associatedtype Model
     
     static func size(_ model: Model) -> CGSize
     func configure(_ model: Model)
 }
 
-public class BaseRxUICollectionViewCell: RxCollectionViewCellAdaptable {
+public class BaseRxUICollectionViewCell: UICollectionViewCell {
     
+    static let identifier = String(describing: self)
     
-    typealias Model = BaseModel
-    
-    static func size(_ model: BaseModel) -> CGSize {
+    static func size(_ model: Decodable) -> CGSize {
         return .zero
-    }
-    
-    func configure(_ model: BaseModel) {
-        
     }
 }

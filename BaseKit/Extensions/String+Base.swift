@@ -5,7 +5,7 @@
 //  Created by Sungjun Chin on 2021/06/21.
 //
 
-extension String {
+public extension String {
     func addQueryParameter(key: String, value: String) -> String {
         var urlString = self
         if urlString.contains("?") {
@@ -17,3 +17,5 @@ extension String {
         return urlString
     }
 }
+
+
