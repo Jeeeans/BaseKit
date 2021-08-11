@@ -17,8 +17,8 @@ enum LogType: String {
 public class Log {
     
     static func getClassName() -> String {
-        let type = type(of: self)
-        let name = String(describing: type.self)
+        let classType = type(of: self)
+        let name = String(describing: classType.self)
         return name
     }
     
