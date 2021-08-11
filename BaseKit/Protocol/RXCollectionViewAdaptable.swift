@@ -9,9 +9,10 @@ import UIKit
 
 
 public protocol RxCollectionViewAdaptable: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    associatedtype Adapter : BaseRxCollectionViewAdapter
     var collectionView: UICollectionView! { get set }
     var useSection: Bool { get set }
-    var adapter: BaseRxCollectionViewAdapter { get set }
+    var adapter: Adapter { get set }
 }
 
 extension RxCollectionViewAdaptable {

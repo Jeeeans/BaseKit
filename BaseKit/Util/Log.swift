@@ -22,32 +22,32 @@ public class Log {
         return name
     }
     
-    static func d(_ message: String?) {
+    public static func d(_ message: String?) {
         guard let message = message else { return }
         Log.print(message, type: .debug)
     }
     
-    static func d(_ object: Any?) {
+    public static func d(_ object: Any?) {
         guard let object = object else { return }
         Log.print(object, type: .debug)
     }
     
-    static func e(_ message: String?) {
+    public static func e(_ message: String?) {
         guard let message = message else { return }
         Log.print(message, type: .error)
     }
     
-    static func e(_ object: Any?) {
+    public static func e(_ object: Any?) {
         guard let object = object else { return }
         Log.print(object, type: .error)
     }
     
-    static func i(_ message: String?) {
+    public static func i(_ message: String?) {
         guard let message = message else { return }
         Log.print(message, type: .info)
     }
     
-    static func i(_ object: Any?) {
+    public static func i(_ object: Any?) {
         guard let object = object else { return }
         Log.print(object, type: .info)
     }

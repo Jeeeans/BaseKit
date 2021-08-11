@@ -7,9 +7,10 @@
 
 import Foundation
 
-public protocol ModuleResponsable: Codable, Hashable {
-    var modules: [Module] { get set }
+public protocol ModuleResponsable: Codable {
+    var moduleList: [Module]! { get set }
     func parseModules()
+
 }
 
 public extension ModuleResponsable {
