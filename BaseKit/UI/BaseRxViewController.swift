@@ -22,6 +22,7 @@ open class BaseRxViewController<T: BaseRxViewModel>: UIViewController {
     
     
     open func viewModelBind(_ viewModel: T) {
+        self.viewModel = viewModel
         
     }
 
