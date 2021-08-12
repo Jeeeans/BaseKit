@@ -22,6 +22,13 @@ open class BaseRxCollectionViewAdapter {
     private var listObservable: Observable<[Decodable]> { _list.asObservable() }
     var list: [Decodable] { _list.value }
     
+    public init() {
+        
+    }
+}
+
+public extension BaseRxCollectionViewAdapter {
+    
     func initialize() {
         self.listObservable
             .observe(on: ConcurrentDispatchQueueScheduler(qos: .background))
@@ -37,6 +44,10 @@ open class BaseRxCollectionViewAdapter {
             .asDriver(onErrorJustReturn: [])
             .drive(_list)
             .disposed(by: disposeBag)
+    }
+    
+    func getListCount() -> Int {
+        return count
     }
     
     func getCell(_ indexPath: IndexPath) -> UICollectionViewCell? {

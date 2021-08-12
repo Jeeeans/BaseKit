@@ -8,7 +8,7 @@
 import UIKit
 
 public extension UICollectionView {
-    func register<T: UICollectionViewCell>(nibFromClass: T, at bundleClass: AnyClass? = nil) {
+    func register<T: UICollectionViewCell>(nibFromClass: T.Type, at bundleClass: AnyClass? = nil) {
         let identifier = String(describing: T.self)
         var bundle: Bundle?
         
@@ -17,7 +17,7 @@ public extension UICollectionView {
         register(UINib(nibName: identifier, bundle: bundle), forCellWithReuseIdentifier: identifier)
     }
     
-    func dequeueReusableCell<T: UICollectionViewCell>(fromClass: T, for indexPath: IndexPath) -> UICollectionViewCell {
+    func dequeueReusableCell<T: UICollectionViewCell>(fromClass: T.Type, for indexPath: IndexPath) -> UICollectionViewCell {
         let identifier = String(describing: T.self)
         return dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
     }

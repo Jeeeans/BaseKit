@@ -15,7 +15,7 @@ public protocol RxCollectionViewAdaptable: UICollectionViewDelegateFlowLayout, U
     var adapter: Adapter { get set }
 }
 
-extension RxCollectionViewAdaptable {
+public extension RxCollectionViewAdaptable {
     func getSectionModel(_ section: Int) -> Decodable? {
         return adapter.item(section)
     }

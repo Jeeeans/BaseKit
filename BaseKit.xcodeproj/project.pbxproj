@@ -40,8 +40,14 @@
 		7E09260526B2724F00C71631 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09260426B2724F00C71631 /* BaseCoordinator.swift */; };
 		7E09260726B2734B00C71631 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09260626B2734B00C71631 /* BaseNavigationController.swift */; };
 		7E09260B26B2800D00C71631 /* UIViewController+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09260A26B2800D00C71631 /* UIViewController+Base.swift */; };
+		7E4C05F726C4EB910065A489 /* UIColor+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C05F626C4EB910065A489 /* UIColor+Base.swift */; };
+		7E4C05F926C4EDC30065A489 /* UIScreen+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C05F826C4EDC30065A489 /* UIScreen+Base.swift */; };
+		7E68CE5C26C4C293005F973F /* UICollectionViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68CE5B26C4C293005F973F /* UICollectionViewHandler.swift */; };
 		7EB7BD6E26B369EB005433F2 /* BaseRxCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7BD6D26B369EB005433F2 /* BaseRxCollectionViewAdapter.swift */; };
 		7EB7BD7026B39D7C005433F2 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7BD6F26B39D7C005433F2 /* CommonFunctions.swift */; };
+		7EF9649426C4E44D00C9CD82 /* MarginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF9649226C4E44D00C9CD82 /* MarginCell.swift */; };
+		7EF9649526C4E44D00C9CD82 /* MarginCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF9649326C4E44D00C9CD82 /* MarginCell.xib */; };
+		7EF9649726C4E49300C9CD82 /* MarginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF9649626C4E49300C9CD82 /* MarginModel.swift */; };
 		7EFF7A3426B3E7DD00360C6C /* ModuleResponsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF7A3326B3E7DD00360C6C /* ModuleResponsable.swift */; };
 		7EFF7A3626B7640F00360C6C /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF7A3526B7640F00360C6C /* Module.swift */; };
 /* End PBXBuildFile section */
@@ -76,8 +82,14 @@
 		7E09260426B2724F00C71631 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		7E09260626B2734B00C71631 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		7E09260A26B2800D00C71631 /* UIViewController+Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Base.swift"; sourceTree = "<group>"; };
+		7E4C05F626C4EB910065A489 /* UIColor+Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Base.swift"; sourceTree = "<group>"; };
+		7E4C05F826C4EDC30065A489 /* UIScreen+Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Base.swift"; sourceTree = "<group>"; };
+		7E68CE5B26C4C293005F973F /* UICollectionViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewHandler.swift; sourceTree = "<group>"; };
 		7EB7BD6D26B369EB005433F2 /* BaseRxCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRxCollectionViewAdapter.swift; sourceTree = "<group>"; };
 		7EB7BD6F26B39D7C005433F2 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		7EF9649226C4E44D00C9CD82 /* MarginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginCell.swift; sourceTree = "<group>"; };
+		7EF9649326C4E44D00C9CD82 /* MarginCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarginCell.xib; sourceTree = "<group>"; };
+		7EF9649626C4E49300C9CD82 /* MarginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginModel.swift; sourceTree = "<group>"; };
 		7EFF7A3326B3E7DD00360C6C /* ModuleResponsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleResponsable.swift; sourceTree = "<group>"; };
 		7EFF7A3526B7640F00360C6C /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,6 +184,8 @@
 				7E0925C226B2510B00C71631 /* UICollectionView+Base.swift */,
 				7E09260A26B2800D00C71631 /* UIViewController+Base.swift */,
 				2E43310426C40685001C0380 /* UIView+Base.swift */,
+				7E4C05F626C4EB910065A489 /* UIColor+Base.swift */,
+				7E4C05F826C4EDC30065A489 /* UIScreen+Base.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -179,6 +193,7 @@
 		7E0925C326B2510B00C71631 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				7EF9649126C4E42900C9CD82 /* Cell */,
 				7EFF7A3226B3E7BA00360C6C /* Model */,
 				7E0925C426B2510B00C71631 /* BaseRxUICollectionView.swift */,
 				7E0925C526B2510B00C71631 /* BaseRxDataSource.swift */,
@@ -189,8 +204,18 @@
 				7E09260426B2724F00C71631 /* BaseCoordinator.swift */,
 				7E09260626B2734B00C71631 /* BaseNavigationController.swift */,
 				7EB7BD6D26B369EB005433F2 /* BaseRxCollectionViewAdapter.swift */,
+				7E68CE5B26C4C293005F973F /* UICollectionViewHandler.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		7EF9649126C4E42900C9CD82 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7EF9649226C4E44D00C9CD82 /* MarginCell.swift */,
+				7EF9649326C4E44D00C9CD82 /* MarginCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		7EFF7A3226B3E7BA00360C6C /* Model */ = {
@@ -198,6 +223,7 @@
 			children = (
 				7EFF7A3326B3E7DD00360C6C /* ModuleResponsable.swift */,
 				7EFF7A3526B7640F00360C6C /* Module.swift */,
+				7EF9649626C4E49300C9CD82 /* MarginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EF9649526C4E44D00C9CD82 /* MarginCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,18 +329,23 @@
 				7E0925CD26B2510B00C71631 /* BaseApiClient.swift in Sources */,
 				7E0925D026B2510B00C71631 /* RxDataSourceAdaptable.swift in Sources */,
 				7E0925D926B2510B00C71631 /* BaseRxUICollectionView.swift in Sources */,
+				7E4C05F926C4EDC30065A489 /* UIScreen+Base.swift in Sources */,
 				7E0925D826B2510B00C71631 /* UICollectionView+Base.swift in Sources */,
+				7EF9649426C4E44D00C9CD82 /* MarginCell.swift in Sources */,
 				7E09260726B2734B00C71631 /* BaseNavigationController.swift in Sources */,
 				7E0925D126B2510B00C71631 /* RxAdapterAdptable.swift in Sources */,
 				7E0925DE26B2510B00C71631 /* BaseRxViewController.swift in Sources */,
 				7E0925D426B2510B00C71631 /* UIImageView+Base.swift in Sources */,
+				7EF9649726C4E49300C9CD82 /* MarginModel.swift in Sources */,
 				7E09260B26B2800D00C71631 /* UIViewController+Base.swift in Sources */,
 				7E0925CE26B2510B00C71631 /* RxInfinitePagable.swift in Sources */,
 				7E0925DB26B2510B00C71631 /* BaseModel.swift in Sources */,
 				7E0925D726B2510B00C71631 /* UIImage+Base.swift in Sources */,
+				7E68CE5C26C4C293005F973F /* UICollectionViewHandler.swift in Sources */,
 				7E0925DC26B2510B00C71631 /* BaseRxViewModel.swift in Sources */,
 				7EB7BD7026B39D7C005433F2 /* CommonFunctions.swift in Sources */,
 				7E0925DD26B2510B00C71631 /* BaseRxUICollectionViewCell.swift in Sources */,
+				7E4C05F726C4EB910065A489 /* UIColor+Base.swift in Sources */,
 				7E09260526B2724F00C71631 /* BaseCoordinator.swift in Sources */,
 				7E0925D526B2510B00C71631 /* Dictionary+Base.swift in Sources */,
 				7E09260326B26F8500C71631 /* RxViewModelAttachable.swift in Sources */,
