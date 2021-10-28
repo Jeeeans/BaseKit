@@ -45,6 +45,7 @@
 		7E68CE5C26C4C293005F973F /* UICollectionViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68CE5B26C4C293005F973F /* UICollectionViewHandler.swift */; };
 		7EB7BD6E26B369EB005433F2 /* BaseRxCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7BD6D26B369EB005433F2 /* BaseRxCollectionViewAdapter.swift */; };
 		7EB7BD7026B39D7C005433F2 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7BD6F26B39D7C005433F2 /* CommonFunctions.swift */; };
+		7EC73201272A81E50089C528 /* UIWindow+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC73200272A81E50089C528 /* UIWindow+Base.swift */; };
 		7EF9649426C4E44D00C9CD82 /* MarginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF9649226C4E44D00C9CD82 /* MarginCell.swift */; };
 		7EF9649526C4E44D00C9CD82 /* MarginCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF9649326C4E44D00C9CD82 /* MarginCell.xib */; };
 		7EF9649726C4E49300C9CD82 /* MarginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF9649626C4E49300C9CD82 /* MarginModel.swift */; };
@@ -87,6 +88,7 @@
 		7E68CE5B26C4C293005F973F /* UICollectionViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewHandler.swift; sourceTree = "<group>"; };
 		7EB7BD6D26B369EB005433F2 /* BaseRxCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRxCollectionViewAdapter.swift; sourceTree = "<group>"; };
 		7EB7BD6F26B39D7C005433F2 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		7EC73200272A81E50089C528 /* UIWindow+Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Base.swift"; sourceTree = "<group>"; };
 		7EF9649226C4E44D00C9CD82 /* MarginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginCell.swift; sourceTree = "<group>"; };
 		7EF9649326C4E44D00C9CD82 /* MarginCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarginCell.xib; sourceTree = "<group>"; };
 		7EF9649626C4E49300C9CD82 /* MarginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginModel.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				2E43310426C40685001C0380 /* UIView+Base.swift */,
 				7E4C05F626C4EB910065A489 /* UIColor+Base.swift */,
 				7E4C05F826C4EDC30065A489 /* UIScreen+Base.swift */,
+				7EC73200272A81E50089C528 /* UIWindow+Base.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				7E09260326B26F8500C71631 /* RxViewModelAttachable.swift in Sources */,
 				7EFF7A3626B7640F00360C6C /* Module.swift in Sources */,
 				7E0925DF26B2510B00C71631 /* BaseAppDelegate.swift in Sources */,
+				7EC73201272A81E50089C528 /* UIWindow+Base.swift in Sources */,
 				7E0925D226B2510B00C71631 /* Log.swift in Sources */,
 				7E0925D326B2510B00C71631 /* String+Base.swift in Sources */,
 				7EFF7A3426B3E7DD00360C6C /* ModuleResponsable.swift in Sources */,

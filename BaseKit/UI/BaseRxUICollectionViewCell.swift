@@ -15,8 +15,9 @@ public protocol RxCollectionViewCellAdaptable: AnyObject {
     static func size(_ model: Model) -> CGSize
     func configure(_ model: Model)
 }
+
 open class BaseRxUICollectionViewCell<T: Decodable>: UICollectionViewCell {
-    static func size(_ model: Decodable) -> CGSize {
+    static func size(_ model: T) -> CGSize {
         fatalError("size function must be implemented")
     }
 }

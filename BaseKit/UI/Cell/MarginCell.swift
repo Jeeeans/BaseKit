@@ -7,8 +7,8 @@
 
 import UIKit
 
-public class MarginCell<T: MarginModel>: BaseRxUICollectionViewCell<T> {
-    override static func size(_ model: MarginModel) -> CGSize {
+public class MarginCell<T: MarginModel>: UICollectionViewCell {
+    static func size(_ model: MarginModel) -> CGSize {
         return CGSize(width: UIScreen.screenWidth, height: model.height)
     }
 

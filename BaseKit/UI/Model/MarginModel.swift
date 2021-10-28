@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct MarginModel: Decodable {
+public class MarginModel: Decodable {
     var height: CGFloat
     var backgroundColor: String
 }
